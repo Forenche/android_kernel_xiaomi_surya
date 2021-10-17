@@ -5314,7 +5314,6 @@ int lct_tp_lockdown_info_callback(void)
 	rc = snprintf(buf, PAGE_SIZE, "%02X%02X%02X%02X%02X%02X%02X%02X\n",
 			buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], buf[7]);
 
-	update_lct_tp_info(NULL, buf);
 	is_already_read = true;
 
 exit:
