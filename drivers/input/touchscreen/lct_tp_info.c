@@ -149,24 +149,6 @@ void uninit_lct_tp_info(void)
 
 EXPORT_SYMBOL(uninit_lct_tp_info);
 
-void update_lct_tp_info(char *tp_info_buf, char *tp_lockdown_info_buf)
-{
-	if (NULL != tp_info_buf) {
-		memset(lct_tp_p->tp_info_buf, 0, sizeof(lct_tp_p->tp_info_buf));
-		strlcpy(lct_tp_p->tp_info_buf, tp_info_buf,
-			sizeof(lct_tp_p->tp_info_buf));
-	}
-	if (NULL != tp_lockdown_info_buf) {
-		memset(lct_tp_p->tp_lockdown_info_buf, 0,
-		       sizeof(lct_tp_p->tp_lockdown_info_buf));
-		strlcpy(lct_tp_p->tp_lockdown_info_buf, tp_lockdown_info_buf,
-			sizeof(lct_tp_p->tp_lockdown_info_buf));
-	}
-	return;
-}
-
-EXPORT_SYMBOL(update_lct_tp_info);
-
 void set_lct_tp_info_callback(int (*pfun) (const char *))
 {
 	if (NULL != lct_tp_p)

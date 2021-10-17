@@ -18,8 +18,6 @@
 extern int init_lct_tp_info(char *tp_info_buf, char *tp_lockdown_info_buf);
 //uninit /proc/tp_info & /proc/tp_lockdown_info node
 extern void uninit_lct_tp_info(void);
-//Update /proc/tp_info & /proc/tp_lockdown_info node
-extern void update_lct_tp_info(char *tp_info_buf, char *tp_lockdown_info_buf);
 //Set tp_info node callback funcation
 extern void set_lct_tp_info_callback(int (*pfun)(const char *));
 //Set tp_lockdown_info node callback funcation
